@@ -1,0 +1,8 @@
+This project is an Agentic AI system built as part of the Ciklum AI Academy.
+
+The system uses Retrieval-Augmented Generation (RAG), tool-based reasoning,
+reflection, and evaluation to autonomously analyze context and generate
+professional LinkedIn-style posts.
+
+The agent retrieves contextual information, reasons about it,
+executes tools, critiques its own output, and scores performance.
