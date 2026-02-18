@@ -62,7 +62,35 @@ Download and install:
 
 https://ollama.com/download
 
-Pull the model:
-
+2️⃣ Pull the LLM Model
 ```bash
 ollama pull llama3
+
+
+3️⃣ Install Project Dependencies
+
+Inside the project folder:
+```bash
+npm install
+
+4️⃣ Run the Agent
+
+Start the application:
+```bash
+npx tsx src/main.ts
+
+5️⃣ Expected Output
+
+You should see:
+```bash
+Retrieving context...
+Generating draft...
+Reflecting...
+Evaluating...
+
+Final Post:
+...
+Evaluation:
+{
+  Relevance: ...
+}
