@@ -1,0 +1,5 @@
+Agentic AI systems use perception, planning, tool-use, and reflection.
+Retrieval-Augmented Generation grounds outputs in relevant context.
+Tool selection can follow a reason-act-observe loop.
+Reflection loops assess quality and trigger regeneration when below thresholds.
+Evaluation can use LLM-as-judge with structured criteria such as relevance and tone.

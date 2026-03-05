@@ -1,6 +1,22 @@
 graph TD
-    A[User Query] --> B[Retrieve Context]
-    B --> C[Generate Post]
-    C --> D[Reflection]
-    D --> E[Evaluation]
-    E --> F[Final Output]
+    U[User Goal] --> P[Planner LLM]
+    subgraph RAG
+      D1[Docs] --> C1[Chunk]
+      C1 --> E1[Embed]
+      E1 --> V1[Vector Store]
+    end
+    P -->|search| V1
+    V1 -->|top-k| K[Context]
+    P -->|generate_post| G[Generator LLM]
+    K --> G
+    G --> T1[Draft]
+    P -->|check_grammar| GR[Grammar LLM]
+    T1 --> GR --> T2[Clean Draft]
+    P -->|format_output| FO[Formatter LLM]
+    T2 --> FO --> T3[Candidate Post]
+    subgraph QA
+      Q1[Reflect LLM] --> Q2[Evaluate LLM]
+    end
+    T3 --> Q1 --> Q2
+    Q2 -->|score>=7| F[Final Output]
+    Q2 -->|score<7| P

@@ -1,0 +1,5 @@
+This capstone focuses on building a LinkedIn post generator with agentic features.
+The system uses a local LLM via Ollama for generation and evaluation.
+The RAG component indexes knowledge to ground outputs in best practices.
+The project is part of the Ciklum AI Academy program.
+The deliverable should balance autonomy, quality, and groundedness.

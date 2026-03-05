@@ -66,3 +66,8 @@ Pull the model:
 
 ```bash
 ollama pull llama3
+
+run the command 
+
+```bash
+ npx tsx src/main.ts
